@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/octavalidate@1.2.0/native/validate.js"></script>
+    <title>User Form</title>
+</head>
+<body>
+    <form name="myForm" id="form" action="#" class="form" method="post" >
+    <div class="container">
+        <div>
+            <div class="input-group">
+                <label>User Name</label>
+                <input type="text" placeholder="Enter your full name" id="name" name="username">
+                <div id="name-error"></div>
+            </div>
+            <div class="input-group">
+                <label>Phone No.</label>
+                <input type="text" placeholder="Enter contact no." id="contactno" name="contactno">
+                <div id="contactno-error"></div>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="text" placeholder="Enter your Email" id="email" name="email">
+                <div id="email-error"></div>
+            </div>
+            <div class="input-group">
+                <label>Division</label>
+                <select name="division" id="division" name="division">
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chittagong">Chittagong</option>
+                </select>
+                <div id="division-error"></div>
+            </div>
+            <div class="input-group">
+                <button type="button" id="submit"  name="submit">Submit</button>&nbsp;&nbsp;
+                <!-- <p class="msg" style="display: none;">Number already exist.</p> -->
+                <div class="msg">Number already exist!</div>
+                <div id="submit-error"></div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div id="success-msg" class="msg" style="display: none;">
+        <h4>Thank You! <br> <p>For successful registration!</p></h4>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
